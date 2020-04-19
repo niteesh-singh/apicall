@@ -1,0 +1,35 @@
+<h3>Welcome home!!!</h3>
+<div class="dropdown">
+    <a class="btn btn-dark dropdown-toggle mb-3" (click)="getApiData()" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Get All
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item">Get Event</a>
+      <a class="dropdown-item">Get Odd</a>
+    </div>
+</div>
+<!-- <button (click)="getApiData()" class="btn btn-dark mb-2">Get Data</button> -->
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">PostId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataArray">
+            <td>{{ data.id }}</td>
+            <td>{{ data.postId }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.email }}</td>
+            <td>{{ data.body }}</td>
+        </tr>
+    </tbody>
+</table>    
+
+
+
+
